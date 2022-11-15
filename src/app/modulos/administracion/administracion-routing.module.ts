@@ -1,11 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BuscarMascotaComponent } from './mascotas/buscar-mascota/buscar-mascota.component';
+import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.component';
+import { EditarMascotaComponent } from './mascotas/editar-mascota/editar-mascota.component';
+import { EliminarMascotaComponent } from './mascotas/eliminar-mascota/eliminar-mascota.component';
+import { BuscarPlanComponent } from './planes/buscar-plan/buscar-plan.component';
+import { CrearPlanComponent } from './planes/crear-plan/crear-plan.component';
+import { EditarPlanComponent } from './planes/editar-plan/editar-plan.component';
+import { EliminarPlanComponent } from './planes/eliminar-plan/eliminar-plan.component';
+import { BuscarProductoSucursalComponent } from './productoSucursal/buscar-producto-sucursal/buscar-producto-sucursal.component';
+import { CrearProductoSucursalComponent } from './productoSucursal/crear-producto-sucursal/crear-producto-sucursal.component';
+import { EditarProductoSucursalComponent } from './productoSucursal/editar-producto-sucursal/editar-producto-sucursal.component';
+import { EliminarProductoSucursalComponent } from './productoSucursal/eliminar-producto-sucursal/eliminar-producto-sucursal.component';
+import { BuscarProspectoComponent } from './prospectos/buscar-prospecto/buscar-prospecto.component';
+import { CrearProspectoComponent } from './prospectos/crear-prospecto/crear-prospecto.component';
+import { EditarProspectoComponent } from './prospectos/editar-prospecto/editar-prospecto.component';
+import { EliminarProspectoComponent } from './prospectos/eliminar-prospecto/eliminar-prospecto.component';
+import { BuscarSucursalComponent } from './sucursales/buscar-sucursal/buscar-sucursal.component';
+import { CrearSucursalComponent } from './sucursales/crear-sucursal/crear-sucursal.component';
+import { EditarSucursalComponent } from './sucursales/editar-sucursal/editar-sucursal.component';
+import { EliminarSucursalComponent } from './sucursales/eliminar-sucursal/eliminar-sucursal.component';
 import { BuscarUsuarioComponent } from './usuarios/buscar-usuario/buscar-usuario.component';
 import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
 import { EditarUsuarioComponent } from './usuarios/editar-usuario/editar-usuario.component';
 import { EliminarUsuarioComponent } from './usuarios/eliminar-usuario/eliminar-usuario.component';
 
 const routes: Routes = [
+  //usuario
   {
     path: 'crear-usuario',
     component: CrearUsuarioComponent,
@@ -21,6 +42,91 @@ const routes: Routes = [
   {
     path: 'eliminar-usuario',
     component: EliminarUsuarioComponent,
+  },
+  //mascota
+  {
+    path: 'crear-mascota',
+    component: CrearMascotaComponent,
+  },
+  {
+    path: 'buscar-mascota',
+    component: BuscarMascotaComponent,
+  },
+  {
+    path: 'editar-mascota',
+    component: EditarMascotaComponent,
+  },
+  {
+    path: 'eliminar-mascota',
+    component: EliminarMascotaComponent,
+  },
+  //planes
+  {
+    path: 'crear-plan',
+    component: CrearPlanComponent,
+  },
+  {
+    path: 'buscar-plan',
+    component: BuscarPlanComponent,
+  },
+  {
+    path: 'editar-plan',
+    component: EditarPlanComponent,
+  },
+  {
+    path: 'eliminar-plan',
+    component: EliminarPlanComponent,
+  },
+  //productoSucursal
+  {
+    path: 'crear-productoSucursal',
+    component: CrearProductoSucursalComponent,
+  },
+  {
+    path: 'buscar-productoSucursal',
+    component: BuscarProductoSucursalComponent,
+  },
+  {
+    path: 'editar-productoSucursal',
+    component: EditarProductoSucursalComponent,
+  },
+  {
+    path: 'eliminar-productoSucursal',
+    component: EliminarProductoSucursalComponent,
+  },
+  //prospectos
+  {
+    path: 'crear-prospecto',
+    component: CrearProspectoComponent,
+  },
+  {
+    path: 'buscar-prospecto',
+    component: BuscarProspectoComponent,
+  },
+  {
+    path: 'editar-prospecto',
+    component: EditarProspectoComponent,
+  },
+  {
+    path: 'eliminar-prospecto',
+    component: EliminarProspectoComponent,
+  },
+  //sucursales
+  {
+    path: 'crear-sucursal',
+    component: CrearSucursalComponent,
+  },
+  {
+    path: 'buscar-sucursal',
+    component: BuscarSucursalComponent,
+  },
+  {
+    path: 'editar-sucursal',
+    component: EditarSucursalComponent,
+  },
+  {
+    path: 'eliminar-sucursal',
+    component: EliminarSucursalComponent,
   },
 ];
 
