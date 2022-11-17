@@ -1,0 +1,39 @@
+#ftit {
+    padding-bottom: 60px;
+    font-size: 80px;
+}
+
+#ftit2 {
+    padding-bottom: 20px;
+    font-size: 80px;
+}
+
+#ptit {
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+#img1 {
+    background-image: url(/assets/perro1.png);
+}
+
+#img2 {
+    background-image: url(/assets/perro2.png);
+}
+
+#img3 {
+    background-image: url(/assets/perro3.png);
+}
+
+
+
+.carousel-item {
+    height: 400px;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}

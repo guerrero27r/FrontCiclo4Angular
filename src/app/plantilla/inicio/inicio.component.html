@@ -1,3 +1,81 @@
-<H1>Bienvenidos a inicio</H1>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" id="img1">
+        <div class="carousel-item active">
+            <div class="carousel-caption">
+                <h5 id="ftit">¡Bienvenido A Mascota Feliz!</h5>
+            </div>
+        </div>
+        <div class="carousel-item" id="img2">
+            <div class="carousel-caption">
+                <h5 id="ftit2">Misión</h5>
+                <p id="ptit">Mascota Feliz busca brindar a los Pacientes y a sus Familiares servicios de calidad y
+                    realizando los
+                    mejores
+                    tratamientos médicos mejorando el bienestar y la salud de los animales</p>
+            </div>
+        </div>
+        <div class="carousel-item" id="img3">
+            <div class="carousel-caption">
+                <h5 id="ftit2">Visión</h5>
+                <p id="ptit">Ser una clínica veterinaria reconocida por su calidad en sus profesionales y sus servicios
+                    a nivel
+                    nacional, ademas
+                    de
+                    una referencia por la tecnologia a mano de los animales.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
-<p>poner mision, vision, planes, foticos, formulario, planes </p>
+<!-- formulario lleva:
+nombre
+apellido
+correo
+celular
+comentario
+-->
+
+<p> productos, foticos, formulario </p>
+
+
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="exampleInputText1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="exampleInputText2">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email@</label>
+        <input type="email" class="form-control" id="exampleInputEmail1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">celular</label>
+        <input type="text" class="form-control" id="exampleInputText3">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Deje su Comentario</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
