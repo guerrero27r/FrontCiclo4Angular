@@ -7,17 +7,13 @@ import { RecuperarClaveComponent } from './recuperar-clave/recuperar-clave.compo
 import { CambiarClaveComponent } from './cambiar-clave/cambiar-clave.component';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 
-
 @NgModule({
   declarations: [
     IdentificacionComponent,
     RecuperarClaveComponent,
     CambiarClaveComponent,
-    CerrarSesionComponent
+    CerrarSesionComponent,
   ],
-  imports: [
-    CommonModule,
-    SeguridadRoutingModule
-  ]
+  imports: [CommonModule, SeguridadRoutingModule],
 })
-export class SeguridadModule { }
+export class SeguridadModule {}

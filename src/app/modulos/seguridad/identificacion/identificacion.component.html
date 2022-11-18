@@ -1,30 +1,16 @@
-<div class="global-container">
-    <div class="card login-form">
-        <div class="card-body">
-            <h3 class="card-title text-center">Iniciar Sesion</h3>
-            <div class="card-text">
-                <!--
-			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-                <form>
-                    <!-- to error: add class "has-danger" -->
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email@</label>
-                        <input type="email" class="form-control form-control-sm" id="exampleInputEmail1"
-                            aria-describedby="emailHelp">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Contraseña</label>
-                        <a routerLink="/seguridad/recuperar-clave" style="float:right;font-size:12px;">Olvido su
-                            Contraseña?</a>
-                        <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Iniciar Sesion</button>
+<div class="formulario">
+    <form class="form">
+        <div class="title">Iniciar Sesion</div>
 
-                    <div class="sign-up">
-                        No tienes cuenta aun? <a routerLink="">Registrate</a>
-                    </div>
-                </form>
-            </div>
+        <div class="agregandotexto ic2">
+            <label for="email" class="labels">Email</label>
+            <input class="agregate" type="email">
         </div>
-    </div>
+        <div class="agregandotexto ic2">
+            <label for="text" class="labels">Pasword</label>
+            <input type="password" class="agregate">
+        </div>
+
+        <button type="submit" class="submit1">Enviar</button>
+    </form>
 </div>
