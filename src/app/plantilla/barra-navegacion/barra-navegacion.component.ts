@@ -19,11 +19,7 @@ export class BarraNavegacionComponent implements OnInit {
     this.subs = this.seguridadServicio
       .ObtenerDatosUsuarioSesion()
       .subscribe((datos: ModeloIdentificar) => {
-        if (datos) {
-          this.sesion = true;
-        } else {
-          this.sesion = false;
-        }
+        this.sesion = datos.estaIdentificado;
       });
   }
 }
