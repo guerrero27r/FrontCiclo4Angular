@@ -5,14 +5,14 @@
 	background-color: #3c7bba;
 	display: flex;
 	justify-content: center;
-	height: 600px;
+	height: 700px;
 }
 
-.form {
+.form1 {
 	background-color: #15172b;
 	border-radius: 20px;
 	box-sizing: border-box;
-	height: 500px;
+	height: 650px;
 	padding: 20px;
 	width: 500px;
 }
@@ -44,7 +44,7 @@
 }
 
 .ic2 {
-	margin-top: 30px;
+	margin-top: 55px;
 }
 
 .icontra {
@@ -74,6 +74,10 @@
 	height: 80px;
 }
 
+.error-message label {
+	color: rgb(169, 28, 28);
+}
+
 .submit1 {
 	background-color: #08d;
 	border-radius: 12px;
@@ -83,7 +87,7 @@
 	cursor: pointer;
 	font-size: 18px;
 	height: 50px;
-	margin-top: 40px;
+	margin-top: 60px;
 	text-align: center;
 	width: 100%;
 

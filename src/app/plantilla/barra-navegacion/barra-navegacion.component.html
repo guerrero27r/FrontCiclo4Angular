@@ -14,22 +14,26 @@
                     <a class="nav-link active text-white" aria-current="page" routerLink="inicio">Inicio</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a *ngIf="sesion" class="nav-link dropdown-toggle text-white" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Menu
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="administracion/buscar-usuario">Usuario</a></li>
-                        <li><a class="dropdown-item" routerLink="administracion/buscar-mascota">Mascota</a></li>
+                        <li *ngIf="sesion"><a class="dropdown-item"
+                                routerLink="administracion/buscar-usuario">Usuario</a></li>
+                        <li *ngIf="sesion"><a class="dropdown-item"
+                                routerLink="administracion/buscar-mascota">Mascota</a></li>
+                        <li *ngIf="sesion"><a class="dropdown-item"
+                                routerLink="administracion/buscar-producto">Producto</a></li>
                     </ul>
                 </li>
             </ul>
 
             <div class="d-flex">
-                <a class="me-2" aria-current="page" routerLink="seguridad/identificacion"><button
+                <a *ngIf="!sesion" class="me-2" aria-current="page" routerLink="seguridad/identificacion"><button
                         class="btn btn-primary">Iniciar Sesion</button>
                 </a>
-                <a class="me-2" aria-current="page" routerLink="seguridad/cerrar-sesion"><button
+                <a *ngIf="sesion" class="me-2" aria-current="page" routerLink="seguridad/cerrar-sesion"><button
                         class="btn btn-danger">Cerrar Sesion</button>
                 </a>
             </div>

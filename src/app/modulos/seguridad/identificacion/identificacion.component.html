@@ -1,14 +1,16 @@
 <div class="formulario">
-    <form class="form">
+    <form class="form1" [formGroup]="fValidate" (ngSubmit)="IdentificacionUsuario()">
         <div class="title">Iniciar Sesion</div>
 
         <div class="agregandotexto ic2">
-            <label for="email" class="labels">Email</label>
-            <input class="agregate" type="email">
+            <label for="Usuario" class="labels">Email</label>
+            <input formControlName="Usuario" class="agregate" type="email" name="Usuario">
+
         </div>
         <div class="agregandotexto ic2">
-            <label for="text" class="labels">Pasword</label>
-            <input type="password" class="agregate">
+            <label for="Clave" class="labels">Pasword</label>
+            <input formControlName="Clave" type="password" class="agregate" name="Clave">
+
         </div>
 
         <div class="icontra">
@@ -18,8 +20,6 @@
             <a routerLink="/../../administracion/crear-usuario">Registrarse</a>
         </div>
 
-
-
-        <button type="submit" class="submit1">Enviar</button>
+        <button [disabled]="!fValidate.valid" class="submit1" type="submit">Enviar</button>
     </form>
 </div>
