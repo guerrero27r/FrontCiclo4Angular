@@ -27,9 +27,11 @@ export class IdentificacionComponent implements OnInit {
     let claveCifrada = CryptoJS.MD5(Clave).toString();
     this.servicioSeguridad.Identificar(Usuario, claveCifrada).subscribe({
       next: (datos: any) => {
-        console.log(datos);
+        alert('Iniciaste Sesion');
+        this.servicioSeguridad.AlmacenarSesion(datos);
       },
       error: (err: any) => {
+        alert('datos invalidos');
         console.log(err);
       },
     });
