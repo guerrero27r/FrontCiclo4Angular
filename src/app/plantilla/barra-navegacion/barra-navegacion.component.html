@@ -19,16 +19,29 @@
                         Menu
                     </a>
                     <ul class="dropdown-menu">
-                        <li *ngIf="sesion"><a class="dropdown-item"
-                                routerLink="administracion/buscar-usuario">Usuario</a></li>
-                        <li *ngIf="sesion"><a class="dropdown-item"
-                                routerLink="administracion/buscar-mascota">Mascota</a></li>
-                        <li *ngIf="sesion"><a class="dropdown-item"
-                                routerLink="administracion/buscar-producto">Producto</a></li>
+                        <li *ngIf="sesion"><a class="dropdown-item" routerLink="administracion/buscar-usuario">
+                                Ususario</a>
+                        </li>
+                        <li *ngIf="sesion"><a class="dropdown-item" routerLink="administracion/buscar-mascota">
+                                Mascota</a>
+                        </li>
+                        <li *ngIf="sesion"><a class="dropdown-item" routerLink="administracion/buscar-productoServicio">
+                                Producto-Servicio</a>
+                        </li>
+                        <li *ngIf="sesion"><a class="dropdown-item" routerLink="administracion/buscar-plan">
+                                Plan</a>
+                        </li>
+                        <li *ngIf="sesion"><a class="dropdown-item" routerLink="administracion/buscar-sucursal">
+                                Sucursal</a>
+                        </li>
+                        <li *ngIf="sesion"><a class="dropdown-item" routerLink="administracion/buscar-prospecto">
+                                Prospecto</a>
+                        </li>
+
                     </ul>
                 </li>
             </ul>
-
+            <!-- Botones sesion -->
             <div class="d-flex">
                 <a *ngIf="!sesion" class="me-2" aria-current="page" routerLink="seguridad/identificacion"><button
                         class="btn btn-primary">Iniciar Sesion</button>

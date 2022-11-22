@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SeguridadService } from 'src/app/servicios/seguridad.service';
-import { ModeloIdentificar } from 'src/modelos/identificar.modelo';
+import { ModeloIdentificar } from 'src/app/modelos/identificar.modelo';
 
 @Component({
   selector: 'app-barra-navegacion',

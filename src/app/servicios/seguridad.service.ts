@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { ModeloIdentificar } from 'src/modelos/identificar.modelo';
+import { ModeloIdentificar } from 'src/app/modelos/identificar.modelo';
 
 @Injectable({
   providedIn: 'root',
@@ -72,5 +72,15 @@ export class SeguridadService {
   SesionIniciada() {
     let datosString = localStorage.getItem('datosSesion');
     return datosString;
+  }
+
+  ObtenerToken() {
+    let datosString = localStorage.getItem('datosSesion');
+    if (datosString) {
+      let datos = JSON.parse(datosString);
+      return datos.tk;
+    } else {
+      return '';
+    }
   }
 }

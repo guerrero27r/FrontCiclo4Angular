@@ -1,0 +1,39 @@
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Crear Producto o Servicio</h3>
+                    <p>Elige entre producto o Servicio para crear uno de estos</p>
+                    <form [formGroup]="fgValidador" (ngSubmit)="EditarProducto()">
+                        <input type="hidden" formControlName="id">
+                        <div class="col-md-12">
+                            <select formControlName="Tipo" class="form-select mt-3">
+                                <option>Producto</option>
+                                <option>Servicio</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Nombre" class="form-control" type="text" placeholder="Nombre P o S">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <textarea formControlName="Descripcion" cols="30" rows="10"
+                                placeholder="Descripción P o S"></textarea>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input formControlName="Precio" class="form-control" type="number" placeholder="Precio">
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button [disabled]="!fgValidador.valid" id="submit" type="submit"
+                                class="btn btn-primary">Editar Producto</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

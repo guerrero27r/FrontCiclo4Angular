@@ -22,11 +22,11 @@ import { EliminarProspectoComponent } from './prospectos/eliminar-prospecto/elim
 import { EditarProspectoComponent } from './prospectos/editar-prospecto/editar-prospecto.component';
 import { BuscarProspectoComponent } from './prospectos/buscar-prospecto/buscar-prospecto.component';
 import { CrearProspectoComponent } from './prospectos/crear-prospecto/crear-prospecto.component';
-import { CrearProductoSucursalComponent } from './productoSucursal/crear-producto-sucursal/crear-producto-sucursal.component';
-import { BuscarProductoSucursalComponent } from './productoSucursal/buscar-producto-sucursal/buscar-producto-sucursal.component';
-import { EliminarProductoSucursalComponent } from './productoSucursal/eliminar-producto-sucursal/eliminar-producto-sucursal.component';
-import { EditarProductoSucursalComponent } from './productoSucursal/editar-producto-sucursal/editar-producto-sucursal.component';
-
+import { CrearProductoServicioComponent } from './productoServicio/crear-producto-servicio/crear-producto-servicio.component';
+import { BuscarProductoServicioComponent } from './productoServicio/buscar-producto-servicio/buscar-producto-servicio.component';
+import { EditarProductoServicioComponent } from './productoServicio/editar-producto-servicio/editar-producto-servicio.component';
+import { EliminarProductoServicioComponent } from './productoServicio/eliminar-producto-servicio/eliminar-producto-servicio.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,14 +50,16 @@ import { EditarProductoSucursalComponent } from './productoSucursal/editar-produ
     EditarProspectoComponent,
     BuscarProspectoComponent,
     CrearProspectoComponent,
-    CrearProductoSucursalComponent,
-    BuscarProductoSucursalComponent,
-    EliminarProductoSucursalComponent,
-    EditarProductoSucursalComponent
+    CrearProductoServicioComponent,
+    BuscarProductoServicioComponent,
+    EditarProductoServicioComponent,
+    EliminarProductoServicioComponent,
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
-  ]
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
-export class AdministracionModule { }
+export class AdministracionModule {}

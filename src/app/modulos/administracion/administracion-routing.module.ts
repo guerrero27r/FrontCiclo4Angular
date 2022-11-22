@@ -8,10 +8,10 @@ import { BuscarPlanComponent } from './planes/buscar-plan/buscar-plan.component'
 import { CrearPlanComponent } from './planes/crear-plan/crear-plan.component';
 import { EditarPlanComponent } from './planes/editar-plan/editar-plan.component';
 import { EliminarPlanComponent } from './planes/eliminar-plan/eliminar-plan.component';
-import { BuscarProductoSucursalComponent } from './productoSucursal/buscar-producto-sucursal/buscar-producto-sucursal.component';
-import { CrearProductoSucursalComponent } from './productoSucursal/crear-producto-sucursal/crear-producto-sucursal.component';
-import { EditarProductoSucursalComponent } from './productoSucursal/editar-producto-sucursal/editar-producto-sucursal.component';
-import { EliminarProductoSucursalComponent } from './productoSucursal/eliminar-producto-sucursal/eliminar-producto-sucursal.component';
+import { BuscarProductoServicioComponent } from './productoServicio/buscar-producto-servicio/buscar-producto-servicio.component';
+import { CrearProductoServicioComponent } from './productoServicio/crear-producto-servicio/crear-producto-servicio.component';
+import { EditarProductoServicioComponent } from './productoServicio/editar-producto-servicio/editar-producto-servicio.component';
+import { EliminarProductoServicioComponent } from './productoServicio/eliminar-producto-servicio/eliminar-producto-servicio.component';
 import { BuscarProspectoComponent } from './prospectos/buscar-prospecto/buscar-prospecto.component';
 import { CrearProspectoComponent } from './prospectos/crear-prospecto/crear-prospecto.component';
 import { EditarProspectoComponent } from './prospectos/editar-prospecto/editar-prospecto.component';
@@ -77,22 +77,26 @@ const routes: Routes = [
     path: 'eliminar-plan',
     component: EliminarPlanComponent,
   },
-  //productoSucursal
+  //productoServicio
   {
-    path: 'crear-productoSucursal',
-    component: CrearProductoSucursalComponent,
+    path: 'crear-productoServicio',
+    component: CrearProductoServicioComponent,
   },
   {
-    path: 'buscar-productoSucursal',
-    component: BuscarProductoSucursalComponent,
+    path: 'buscar-productoServicio',
+    component: BuscarProductoServicioComponent,
   },
   {
-    path: 'editar-productoSucursal',
-    component: EditarProductoSucursalComponent,
+    path: 'editar-productoServicio/',
+    component: EditarProductoServicioComponent,
   },
   {
-    path: 'eliminar-productoSucursal',
-    component: EliminarProductoSucursalComponent,
+    path: 'editar-productoServicio/:id',
+    component: EditarProductoServicioComponent,
+  },
+  {
+    path: 'eliminar-productoServicio',
+    component: EliminarProductoServicioComponent,
   },
   //prospectos
   {
