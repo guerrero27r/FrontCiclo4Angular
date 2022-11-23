@@ -17,6 +17,7 @@ export class EditarProductoServicioComponent implements OnInit {
     Nombre: ['', [Validators.required]],
     Descripcion: ['', [Validators.required]],
     Precio: ['', [Validators.required]],
+    Foto: ['', [Validators.required]],
   });
 
   constructor(
@@ -40,6 +41,7 @@ export class EditarProductoServicioComponent implements OnInit {
         this.fgValidador.controls['Nombre'].setValue(datos.Nombre);
         this.fgValidador.controls['Descripcion'].setValue(datos.Descripcion);
         this.fgValidador.controls['Precio'].setValue(datos.Precio);
+        this.fgValidador.controls['Foto'].setValue(datos.Foto);
       });
   }
 

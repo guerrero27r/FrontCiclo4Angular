@@ -44,7 +44,11 @@ const routes: Routes = [
     component: EditarUsuarioComponent,
   },
   {
-    path: 'eliminar-usuario',
+    path: 'eliminar-usuario/',
+    component: EliminarUsuarioComponent,
+  },
+  {
+    path: 'eliminar-usuario/:id',
     component: EliminarUsuarioComponent,
   },
   //mascota
@@ -100,6 +104,10 @@ const routes: Routes = [
   },
   {
     path: 'eliminar-productoServicio',
+    component: EliminarProductoServicioComponent,
+  },
+  {
+    path: 'eliminar-productoServicio/:id',
     component: EliminarProductoServicioComponent,
   },
   //prospectos
