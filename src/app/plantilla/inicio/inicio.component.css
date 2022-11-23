@@ -165,7 +165,7 @@ img {
     width: 100%;
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    background: transparent;
+    background: rgb(45, 7, 7);
 }
 
 .btn:hover {
@@ -204,6 +204,8 @@ img {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background-image: linear-gradient(109.6deg, rgba(231, 76, 60, 1) 11.2%, rgba(203, 67, 53, 1) 91.1%);
+
 }
 
 .card_content {
@@ -225,6 +227,11 @@ img {
     letter-spacing: 1px;
     text-transform: capitalize;
     margin: 0px;
+    text-align: center;
+}
+
+.card_image {
+    text-align: center;
 }
 
 .card_text {
@@ -233,6 +240,8 @@ img {
     line-height: 1.5;
     margin-bottom: 1.25rem;
     font-weight: 400;
+    text-align: justify;
+    margin-top: 20px;
 }
 
 .made_by {

@@ -1,1 +1,48 @@
-<p>editar-usuario works!</p>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Editar Usuario</h3>
+                    <p>Elige el Rol</p>
+                    <form [formGroup]="fgValidador" (ngSubmit)=" EditarUsuario()">
+                        <input type="hidden" formControlName="id">
+                        <div class="col-md-12">
+                            <input formControlName="Cedula" class="form-control" type="text" placeholder="Cedula" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <input formControlName="Nombre" class="form-control" type="text" placeholder="Nombre" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <input formControlName="Apellido" class="form-control" type="text" placeholder="Apellido" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <input formControlName="Telefono" class="form-control mt-3" type="tel"
+                                placeholder="Telefono" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <input formControlName="Correo" class="agregate" type="email" placeholder="Correo" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <select formControlName="Rol" class="form-select mt-3">
+                                <option>admin</option>
+                                <option>Asesor</option>
+                                <option>Cliente</option>
+                            </select>
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button [disabled]="!fgValidador.valid" id="submit" type="submit"
+                                class="btn btn-primary">Editar Usuario</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

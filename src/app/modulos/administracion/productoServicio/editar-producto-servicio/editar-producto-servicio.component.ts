@@ -47,6 +47,7 @@ export class EditarProductoServicioComponent implements OnInit {
     let Tipo = this.fgValidador.controls['Tipo'].value;
     let Nombre = this.fgValidador.controls['Nombre'].value;
     let Descripcion = this.fgValidador.controls['Descripcion'].value;
+    let Foto = this.fgValidador.controls['Foto'].value;
     let Precio = parseInt(this.fgValidador.controls['Precio'].value);
 
     let p = new ModeloProducto();
@@ -54,6 +55,7 @@ export class EditarProductoServicioComponent implements OnInit {
     p.Nombre = Nombre;
     p.Descripcion = Descripcion;
     p.Precio = Precio;
+    p.Foto = Foto;
     p.id = this.id;
 
     this.servicioProducto.ActualizarProducto(p).subscribe({

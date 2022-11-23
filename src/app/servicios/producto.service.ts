@@ -53,7 +53,7 @@ export class ProductoService {
   }
 
   EliminarProducto(id: string): Observable<any> {
-    return this.Htpp.delete(`${this.url}/producto-servicios/{id}`, {
+    return this.Htpp.delete(`${this.url}/producto-servicios/${id}`, {
       headers: new HttpHeaders({
         Authorization: `Bearer ${this.token}`,
       }),

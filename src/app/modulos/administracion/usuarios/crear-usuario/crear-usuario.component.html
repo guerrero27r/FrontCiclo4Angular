@@ -1,33 +1,48 @@
-<div class="formulario">
-    <form class="form">
-        <div class="title">Registrate</div>
-        <div class="agregandotexto ic1">
-            <label for="text" class="labels">Cedula</label>
-            <input class="agregate" type="text" />
-        </div>
-        <div class="agregandotexto ic2">
-            <label for="text" class="labels">Nombre</label>
-            <input class="agregate" type="text" />
-        </div>
-        <div class="agregandotexto ic2">
-            <label for="text" class="labels">Apellido</label>
-            <input class="agregate" type="text" />
-        </div>
-        <div class="agregandotexto ic2">
-            <label for="text" class="labels">Celular</label>
-            <input class="agregate" type="tel" />
-        </div>
-        <div class="agregandotexto ic2">
-            <label for="email" class="labels">Email</label>
-            <input class="agregate" type="email" />
-        </div>
-        <div class="agregandotexto ic2">
-            <label for="text" class="labels">Rol</label>
-            <select name="rol" id="rol1" class="agregate">
-                <option value="cliente">Cliente</option>
-            </select>
-        </div>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Crear Usuario</h3>
+                    <p>Elige el Rol</p>
+                    <form [formGroup]="fgValidador" (ngSubmit)="GuardarUsuario()">
 
-        <button type="submit" class="submit1">Enviar</button>
-    </form>
+                        <div class="col-md-12">
+                            <input formControlName="Cedula" class="form-control" type="text" placeholder="Cedula" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <input formControlName="Nombre" class="form-control" type="text" placeholder="Nombre" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <input formControlName="Apellido" class="form-control" type="text" placeholder="Apellido" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <input formControlName="Telefono" class="form-control mt-3" type="tel"
+                                placeholder="Telefono" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <input formControlName="Correo" class="agregate" type="email" placeholder="Correo" />
+                        </div>
+
+                        <div class="col-md-12">
+                            <select formControlName="Rol" class="form-select mt-3">
+                                <option>admin</option>
+                                <option>Asesor</option>
+                                <option>Cliente</option>
+                            </select>
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button [disabled]="!fgValidador.valid" id="submit" type="submit"
+                                class="btn btn-primary">Crear Producto</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

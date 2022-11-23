@@ -1,24 +1,28 @@
-<a routerLink="/administracion/crear-productoServicio" class="btn btn-primary mt-3">Nuevo Producto</a>
+<h1 class="titlep">Productos y Servicios</h1>
+
+<a routerLink="/administracion/crear-productoServicio" class="btn btn-primary mt-3 m-4">Nuevo Producto</a>
 
 <div class="container mt-4">
-    <table>
+    <table class="table table-hover table-secondary">
         <thead>
             <tr>
-                <th>Typo</th>
-                <th>Nombre</th>
-                <th>Descripcion</th>
-                <th>Precio</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                <th scope="col" class="table-dark">Typo</th>
+                <th scope="col" class="table-dark">Foto</th>
+                <th scope="col" class="table-dark">Nombre</th>
+                <th scope="col" class="table-dark">Descripcion</th>
+                <th scope="col" class="table-dark">Precio</th>
+                <th scope="col" class="table-dark">Editar</th>
+                <th scope="col" class="table-dark">Eliminar</th>
             </tr>
 
         </thead>
         <tbody>
             <tr *ngFor="let p of ListadoRegistros">
                 <td>{{p.Tipo}}</td>
+                <td><img src="{{p.Foto}}" height="70px" id="imd"> </td>
                 <td>{{p.Nombre}}</td>
                 <td>{{p.Descripcion}}</td>
-                <td>{{p.Precio}}</td>
+                <td>${{p.Precio}}</td>
                 <td>
                     <a routerLink="/administracion/editar-productoServicio/{{p.id}}" class="btn btn-primary">Editar</a>
                 </td>

@@ -3,5 +3,6 @@ export class ModeloProducto {
   Tipo?: string;
   Nombre?: string;
   Descripcion?: string;
+  Foto?: string;
   Precio?: number;
 }

@@ -40,6 +40,10 @@ const routes: Routes = [
     component: EditarUsuarioComponent,
   },
   {
+    path: 'editar-usuario/:id',
+    component: EditarUsuarioComponent,
+  },
+  {
     path: 'eliminar-usuario',
     component: EliminarUsuarioComponent,
   },

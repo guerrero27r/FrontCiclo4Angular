@@ -89,7 +89,7 @@
     background-color: #fff;
     font-size: 15px;
     font-weight: 300;
-    color: #8d8d8d;
+    color: #000000;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     margin-top: 16px;
@@ -121,7 +121,7 @@
     border: 0;
     font-size: 15px;
     font-weight: 300;
-    color: #8d8d8d;
+    color: #000000;
     outline: none;
     resize: none;
     height: 120px;
@@ -133,8 +133,8 @@
 .form-content textarea:hover,
 .form-content textarea:focus {
     border: 0;
-    background-color: #ebeff8;
-    color: #8d8d8d;
+    background-color: #f3f3f3;
+    color: #000000;
 }
 
 .mv-up {

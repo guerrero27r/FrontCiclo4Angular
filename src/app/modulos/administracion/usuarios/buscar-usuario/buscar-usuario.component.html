@@ -1,1 +1,36 @@
-<p>buscar-usuario works!</p>
+<h1 class="titlep">Usuarios</h1>
+
+<a routerLink="/administracion/crear-usuario" class="btn btn-primary mt-3 m-4">Crear Usuario</a>
+
+<div class="container mt-4">
+    <table class="table table-hover table-secondary">
+        <thead>
+            <tr>
+                <th scope="col" class="table-dark">Cedula</th>
+                <th scope="col" class="table-dark">Nombre</th>
+                <th scope="col" class="table-dark">Apellido</th>
+                <th scope="col" class="table-dark">Telefono</th>
+                <th scope="col" class="table-dark">Email</th>
+                <th scope="col" class="table-dark">Rol</th>
+                <th scope="col" class="table-dark">Editar</th>
+                <th scope="col" class="table-dark">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of ListadoRegistros">
+                <td>{{p.Cedula}}</td>
+                <td>{{p.Nombre}}</td>
+                <td>{{p.Apellido}}</td>
+                <td>{{p.Telefono}}</td>
+                <td>{{p.Correo}}</td>
+                <td>{{p.Rol}}</td>
+                <td>
+                    <a routerLink="/administracion/editar-usuario/{{p.id}}" class="btn btn-primary">Editar</a>
+                </td>
+                <td>
+                    <a routerLink="/administracion/eliminar-usuario/{{p.id}}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
