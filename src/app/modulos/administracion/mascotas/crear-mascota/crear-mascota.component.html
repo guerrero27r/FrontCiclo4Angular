@@ -1,1 +1,43 @@
-<p>crear-mascota works!</p>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Crear Mascota</h3>
+                    <p>Elige entre Mascota para crear uno de estos</p>
+                    <form [formGroup]="fgValidador" (ngSubmit)="GuardarMascota()">
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Nombre" class="form-control" type="text"
+                                placeholder="Nombre Mascota">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Estado" class="form-control" type="text"
+                                placeholder="Estado Mascota">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Especie" class="form-control" type="text"
+                                placeholder="Especie Mascota">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Foto" class="form-control" type="text" placeholder="Pegar Url Foto">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <textarea formControlName="Comentario" cols="30" rows="10"
+                                placeholder="Comentario Mascota"></textarea>
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button [disabled]="!fgValidador.valid" id="submit" type="submit"
+                                class="btn btn-primary">Crear Plan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

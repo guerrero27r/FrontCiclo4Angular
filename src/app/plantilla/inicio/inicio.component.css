@@ -208,6 +208,19 @@ img {
 
 }
 
+
+
+.card2 {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+}
+
 .card_content {
     padding: 1rem;
     background-image: radial-gradient(circle 610px at 5.2% 51.6%, rgba(5, 8, 114, 1) 0%, rgba(7, 3, 53, 1) 97.5%);
@@ -217,7 +230,7 @@ img {
 
 .card_content2 {
     padding: 1rem;
-    background-image: linear-gradient(109.6deg, rgba(231, 76, 60, 1) 11.2%, rgba(203, 67, 53, 1) 91.1%);
+
 }
 
 .card_title {
@@ -232,6 +245,7 @@ img {
 
 .card_image {
     text-align: center;
+    height: 50%;
 }
 
 .card_text {

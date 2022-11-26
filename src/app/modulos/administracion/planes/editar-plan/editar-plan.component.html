@@ -1,1 +1,37 @@
-<p>editar-plan works!</p>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Editar Plan</h3>
+                    <p>Puedes Editar uno de estos o todos los campos</p>
+                    <form [formGroup]="fgValidador" (ngSubmit)="EditarPlan()">
+                        <input type="hidden" formControlName="id">
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Nombre" class="form-control" type="text" placeholder="Nombre">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <textarea formControlName="Descripcion" cols="30" rows="10"
+                                placeholder="Descripción"></textarea>
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Precio" class="form-control" type="number" placeholder="Precio">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Foto" class="form-control" type="text" placeholder="Pegar Url Foto">
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button [disabled]="!fgValidador.valid" id="submit" type="submit"
+                                class="btn btn-primary">Editar Plan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

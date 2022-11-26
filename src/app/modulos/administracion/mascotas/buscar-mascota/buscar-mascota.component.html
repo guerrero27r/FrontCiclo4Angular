@@ -1,1 +1,36 @@
-<p>buscar-mascota works!</p>
+<h1 class="titlep">Mascotas</h1>
+
+<a routerLink="/administracion/crear-mascota" class="btn btn-primary mt-3 m-4">Nueva Mascota</a>
+
+<div class="container mt-4">
+    <table class="table table-hover table-secondary">
+        <thead>
+            <tr>
+                <th scope="col" class="table-dark">Nombre</th>
+                <th scope="col" class="table-dark">Foto</th>
+                <th scope="col" class="table-dark">Estado</th>
+                <th scope="col" class="table-dark">Especie</th>
+                <th scope="col" class="table-dark">Comentario</th>
+                <th scope="col" class="table-dark">Editar</th>
+                <th scope="col" class="table-dark">Eliminar</th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of ListadoRegistros">
+                <td>{{p.Nombre}}</td>
+                <td><img src="{{p.Foto}}" height="60px" id="imd"> </td>
+                <td> <b>{{p.Estado}}</b></td>
+                <td>{{p.Especie}}</td>
+                <td>{{p.Comentario}}</td>
+                <td>
+                    <a routerLink="/administracion/editar-mascota/{{p.id}}" class="btn btn-primary">Editar</a>
+                </td>
+                <td>
+                    <a routerLink="/administracion/eliminar-mascota/{{p.id}}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

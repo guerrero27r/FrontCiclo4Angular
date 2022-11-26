@@ -1,1 +1,35 @@
-<p>buscar-prospecto works!</p>
+<h1 class="titlep">Productos y Servicios</h1>
+
+<a routerLink="/administracion/crear-productoServicio" class="btn btn-primary mt-3 m-4">Nuevo Producto</a>
+
+<div class="container mt-4">
+    <table class="table table-hover table-secondary">
+        <thead>
+            <tr>
+                <th scope="col" class="table-dark">Nombre</th>
+                <th scope="col" class="table-dark">Apellido</th>
+                <th scope="col" class="table-dark">Correo</th>
+                <th scope="col" class="table-dark">Celular</th>
+                <th scope="col" class="table-dark">Comentario</th>
+                <th scope="col" class="table-dark">Editar</th>
+                <th scope="col" class="table-dark">Eliminar</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of ListadoRegistrosProspectos">
+                <td>{{p.Nombre}}</td>
+                <td>{{p.Apellido}}</td>
+                <td>{{p.Correo}}</td>
+                <td>{{p.Celular}}</td>
+                <td>{{p.Comentario}}</td>
+                <td>
+                    <a routerLink="/administracion/editar-prospecto/{{p.id}}" class="btn btn-primary">Editar</a>
+                </td>
+                <td>
+                    <a routerLink="/administracion/eliminar-prospecto/{{p.id}}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -65,7 +65,15 @@ const routes: Routes = [
     component: EditarMascotaComponent,
   },
   {
+    path: 'editar-mascota/:id',
+    component: EditarMascotaComponent,
+  },
+  {
     path: 'eliminar-mascota',
+    component: EliminarMascotaComponent,
+  },
+  {
+    path: 'eliminar-mascota/:id',
     component: EliminarMascotaComponent,
   },
   //planes
@@ -82,7 +90,15 @@ const routes: Routes = [
     component: EditarPlanComponent,
   },
   {
+    path: 'editar-plan/:id',
+    component: EditarPlanComponent,
+  },
+  {
     path: 'eliminar-plan',
+    component: EliminarPlanComponent,
+  },
+  {
+    path: 'eliminar-plan/:id',
     component: EliminarPlanComponent,
   },
   //productoServicio
@@ -121,6 +137,10 @@ const routes: Routes = [
   },
   {
     path: 'editar-prospecto',
+    component: EditarProspectoComponent,
+  },
+  {
+    path: 'editar-prospecto/:id',
     component: EditarProspectoComponent,
   },
   {

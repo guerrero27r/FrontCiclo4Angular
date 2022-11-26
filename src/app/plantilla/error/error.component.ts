@@ -3,13 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-error',
   templateUrl: './error.component.html',
-  styleUrls: ['./error.component.css']
+  styleUrls: ['./error.component.css'],
 })
 export class ErrorComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
+// https://github.com/guerrero27r

@@ -18,3 +18,4 @@ export class CerrarSesionComponent implements OnInit {
     this.router.navigate(['/inicio']);
   }
 }
+// https://github.com/guerrero27r
