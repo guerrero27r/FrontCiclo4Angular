@@ -83,41 +83,43 @@
 </div>
 
 <!-- formulario prospecto-->
-<div class="formulario">
-    <div class="form">
-        <div class="title">Contáctenos</div>
-        <div class="agregandotexto ic1">
-            <label for="text" class="labels">Nombre</label>
-            <input class="agregate" type="text" />
-            <div class="cortar"></div>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Contactanos</h3>
+                    <p>Ingresa todos los campos para Contactarnos contigo</p>
+                    <form [formGroup]="fgValidador" (ngSubmit)="GuardarProspectos()">
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Nombre" class="form-control" type="text" placeholder="Nombre">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Apellido" class="form-control" type="text" placeholder="Apellido">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Correo" class="form-control" type="email" placeholder="Email">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Celular" class="form-control" type="text" placeholder="Celular">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <textarea formControlName="Comentario" cols="30" rows="10"
+                                placeholder="Escribir Comentario"></textarea>
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button [disabled]="!fgValidador.valid" id="submit1" type="submit"
+                                class="bntcolor">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="agregandotexto ic2">
-            <label for="text" class="labels">Apellido</label>
-            <input class="agregate" type="text" />
-            <div class="cortar"></div>
-
-        </div>
-        <div class="agregandotexto ic2">
-            <label for="email" class="labels">Email</label>
-            <input class="agregate" type="email" />
-            <div class="cortar "></div>
-
-        </div>
-        <div class="agregandotexto ic2">
-            <label for="text" class="labels">Celular</label>
-            <input class="agregate" type="tel" />
-            <div class="cortar"></div>
-
-        </div>
-
-        <div class="agregandotexto ic2">
-            <label for="text" class="labels">Deje su Comentario</label>
-            <textarea class="agregate" id="agragatearea" rows="3"></textarea>
-            <div class="cortar"></div>
-
-        </div>
-
-
-        <button type="submit" class="submit1">Enviar</button>
     </div>
 </div>

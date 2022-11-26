@@ -147,6 +147,10 @@ const routes: Routes = [
     path: 'eliminar-prospecto',
     component: EliminarProspectoComponent,
   },
+  {
+    path: 'eliminar-prospecto/:id',
+    component: EliminarProspectoComponent,
+  },
   //sucursales
   {
     path: 'crear-sucursal',
@@ -161,7 +165,15 @@ const routes: Routes = [
     component: EditarSucursalComponent,
   },
   {
+    path: 'editar-sucursal/:id',
+    component: EditarSucursalComponent,
+  },
+  {
     path: 'eliminar-sucursal',
+    component: EliminarSucursalComponent,
+  },
+  {
+    path: 'eliminar-sucursal/:id',
     component: EliminarSucursalComponent,
   },
 ];

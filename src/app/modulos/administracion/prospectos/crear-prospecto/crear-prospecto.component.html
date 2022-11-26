@@ -1,1 +1,40 @@
-<p>crear-prospecto works!</p>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Crear Prospecto</h3>
+                    <p>Ingresa todos los campos para crear Prospecto</p>
+                    <form [formGroup]="fgValidador" (ngSubmit)="GuardarProspectos()">
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Nombre" class="form-control" type="text" placeholder="Nombre">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Apellido" class="form-control" type="text" placeholder="Apellido">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Correo" class="form-control" type="email" placeholder="Email">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Celular" class="form-control" type="text" placeholder="Celular">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <textarea formControlName="Comentario" cols="30" rows="10"
+                                placeholder="Escribir Comentario"></textarea>
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button [disabled]="!fgValidador.valid" id="submit" type="submit"
+                                class="btn btn-primary">Crear Prospecto</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

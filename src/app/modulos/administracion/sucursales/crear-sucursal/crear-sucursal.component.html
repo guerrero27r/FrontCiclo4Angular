@@ -1,1 +1,36 @@
-<p>crear-sucursal works!</p>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Crear Sucursal</h3>
+                    <p>Ingresa todos los campos para crear Sucursal</p>
+                    <form [formGroup]="fgValidador" (ngSubmit)="GuardarSucursal()">
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Departamento" class="form-control" type="text"
+                                placeholder="Departamento">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Ciudad" class="form-control" type="text" placeholder="Ciudad">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Direccion" class="form-control" type="text" placeholder="Direccion">
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <input formControlName="Telefono" class="form-control" type="text" placeholder="Telefono">
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button [disabled]="!fgValidador.valid" id="submit" type="submit"
+                                class="btn btn-primary">Crear Sucursal</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
