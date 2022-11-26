@@ -1,1 +1,12 @@
-<p>recuperar-clave works!</p>
+<div class="formulario">
+    <form class="form" [formGroup]="fValidate" (ngSubmit)="RecuperarClaveUsuario()">
+        <div class="title">Recuperar Clave </div>
+        <p style="color:white ;">Desea cambiar su clave ingrese el correo con el cual esta registrado:</p>
+
+        <div class="agregandotexto ic2">
+            <label for="text" class="labels">Email</label>
+            <input formControlName="Correo" class="agregate" type="text" />
+        </div>
+        <button type="submit" class="submit1">Enviar</button>
+    </form>
+</div>

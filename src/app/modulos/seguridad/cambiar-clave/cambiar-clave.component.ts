@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SeguridadService } from 'src/app/servicios/seguridad.service';
 import * as CryptoJS from 'crypto-js';
+import { ModeloCambioClave } from 'src/app/modelos/cambioClave.modelo';
 
 @Component({
   selector: 'app-cambiar-clave',
@@ -11,8 +12,8 @@ import * as CryptoJS from 'crypto-js';
 })
 export class CambiarClaveComponent implements OnInit {
   fValidate: FormGroup = this.fb.group({
-    Usuario: ['', [Validators.required, Validators.email]],
-    Contrasena: ['', [Validators.required]],
+    Clave_actual: ['', [Validators.required]],
+    Nueva_clave: ['', [Validators.required]],
   });
 
   constructor(
@@ -23,14 +24,20 @@ export class CambiarClaveComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  IdentificacionUsuario() {
-    let Usuario = this.fValidate.controls['Usuario'].value;
-    let Contrasena = this.fValidate.controls['Contrasena'].value;
-    let claveCifrada = CryptoJS.MD5(Contrasena).toString();
-    this.servicioSeguridad.Identificar(Usuario, claveCifrada).subscribe({
+  GuardarClave() {
+    let p = new ModeloCambioClave();
+    p.id_usuario = this.servicioSeguridad.obteneridSesion();
+    p.Clave_actual = CryptoJS.MD5(
+      this.fValidate.controls['Clave_actual'].value
+    ).toString();
+    p.Nueva_clave = CryptoJS.MD5(
+      this.fValidate.controls['Nueva_clave'].value
+    ).toString();
+
+    this.servicioSeguridad.CambiarClave(p).subscribe({
       next: (datos: any) => {
-        alert('Iniciaste Sesion');
-        this.servicioSeguridad.AlmacenarSesion(datos);
+        alert('Se cambio la clave');
+        console.log(datos);
         this.router.navigate(['/inicio']);
       },
       error: (err: any) => {

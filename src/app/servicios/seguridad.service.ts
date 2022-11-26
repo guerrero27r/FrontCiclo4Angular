@@ -2,18 +2,23 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ModeloIdentificar } from 'src/app/modelos/identificar.modelo';
+import { ModeloCambioClave } from '../modelos/cambioClave.modelo';
+import { ModeloDatos } from '../modelos/datos.modelo';
+import { ModeloRecuperarClave } from '../modelos/recuperarClave.modelo';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SeguridadService {
   url = 'http://localhost:3000';
+  token: string = '';
   datosUsuarioSesion = new BehaviorSubject<ModeloIdentificar>(
     new ModeloIdentificar()
   );
 
   constructor(private http: HttpClient) {
     this.VerificarSesionActual();
+    this.ObtenerToken();
   }
 
   VerificarSesionActual() {
@@ -47,6 +52,30 @@ export class SeguridadService {
     );
   }
 
+  CambiarClave(cambioClave: ModeloCambioClave): Observable<ModeloCambioClave> {
+    return this.http.post<ModeloCambioClave>(
+      `${this.url}/cambiar-contrasena`,
+      cambioClave,
+      {
+        headers: new HttpHeaders({
+          Authorization: `Bearer ${this.ObtenerToken()}`,
+        }),
+      }
+    );
+  }
+
+  RecuperarClave(Correo: string): Observable<ModeloRecuperarClave> {
+    return this.http.post<ModeloRecuperarClave>(
+      `${this.url}/recuperar-contrasena`,
+      { Correo: Correo },
+      {
+        headers: new HttpHeaders({
+          Authorization: `Bearer ${this.ObtenerToken()}`,
+        }),
+      }
+    );
+  }
+
   AlmacenarSesion(datos: ModeloIdentificar) {
     datos.estaIdentificado = true;
     let stringDatos = JSON.stringify(datos);
@@ -61,6 +90,16 @@ export class SeguridadService {
       return datos;
     } else {
       return null;
+    }
+  }
+
+  obteneridSesion(): string {
+    let datosString = localStorage.getItem('datosSesion');
+    if (datosString) {
+      let datos = JSON.parse(datosString);
+      return datos.datos.id;
+    } else {
+      return '';
     }
   }
 

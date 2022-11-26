@@ -1,10 +1,16 @@
-<p>cambiar-clave works!</p>
+<!-- <input type="hidden" formControlName="id_usuario" class="agregate" name="Usuario"> -->
 <div class="formulario">
-    <form class="form">
+    <form class="form" [formGroup]="fValidate" (ngSubmit)="GuardarClave()">
         <div class="title">Cambiar Clave</div>
-        <div class="agregandotexto ic1">
-            <label for="text" class="labels">Cambiar Clave</label>
-            <input class="agregate" type="text" />
+        <p style="color:white ;">Desea cambiar su clave:</p>
+
+        <div class="agregandotexto ic2">
+            <label for="text" class="labels">Clave Actual</label>
+            <input formControlName="Clave_actual" class="agregate" type="password" />
+        </div>
+        <div class="agregandotexto ic2">
+            <label for="text" class="labels">Clave Nueva</label>
+            <input formControlName="Nueva_clave" class="agregate" type="password" />
         </div>
 
         <button type="submit" class="submit1">Enviar</button>
