@@ -52,10 +52,18 @@ export class SeguridadService {
     );
   }
 
-  CambiarClave(cambioClave: ModeloCambioClave): Observable<ModeloCambioClave> {
+  CambiarClave(
+    id_usuario: string,
+    Clave_actual: string,
+    Nueva_clave: string
+  ): Observable<ModeloCambioClave> {
     return this.http.post<ModeloCambioClave>(
       `${this.url}/cambiar-contrasena`,
-      cambioClave,
+      {
+        id_usuario: id_usuario,
+        Clave_actual: Clave_actual,
+        Nueva_clave: Nueva_clave,
+      },
       {
         headers: new HttpHeaders({
           Authorization: `Bearer ${this.ObtenerToken()}`,

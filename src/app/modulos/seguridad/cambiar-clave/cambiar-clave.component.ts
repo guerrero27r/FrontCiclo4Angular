@@ -25,25 +25,26 @@ export class CambiarClaveComponent implements OnInit {
   ngOnInit(): void {}
 
   GuardarClave() {
-    let p = new ModeloCambioClave();
-    p.id_usuario = this.servicioSeguridad.obteneridSesion();
-    p.Clave_actual = CryptoJS.MD5(
+    let id_usuario = this.servicioSeguridad.obteneridSesion();
+    let Clave_actual = CryptoJS.MD5(
       this.fValidate.controls['Clave_actual'].value
     ).toString();
-    p.Nueva_clave = CryptoJS.MD5(
+    let Nueva_clave = CryptoJS.MD5(
       this.fValidate.controls['Nueva_clave'].value
     ).toString();
 
-    this.servicioSeguridad.CambiarClave(p).subscribe({
-      next: (datos: any) => {
-        alert('Se cambio la clave');
-        console.log(datos);
-        this.router.navigate(['/inicio']);
-      },
-      error: (err: any) => {
-        alert('datos invalidos');
-        console.log(err);
-      },
-    });
+    this.servicioSeguridad
+      .CambiarClave(id_usuario, Clave_actual, Nueva_clave)
+      .subscribe({
+        next: (res: any) => {
+          alert('Se cambio la clave');
+          console.log(res);
+          this.router.navigate(['/inicio']);
+        },
+        error: (err: any) => {
+          alert('datos invalidos');
+          console.log(err);
+        },
+      });
   }
 }
