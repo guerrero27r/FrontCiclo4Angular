@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ModeloIdentificar } from 'src/app/modelos/identificar.modelo';
 import { ModeloCambioClave } from '../modelos/cambioClave.modelo';
+import { ModeloUsuario } from '../modelos/crearUsuario.modelo';
 import { ModeloDatos } from '../modelos/datos.modelo';
 import { ModeloRecuperarClave } from '../modelos/recuperarClave.modelo';
 

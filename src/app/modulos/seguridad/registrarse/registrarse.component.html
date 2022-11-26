@@ -3,8 +3,8 @@
         <div class="form-holder">
             <div class="form-content">
                 <div class="form-items">
-                    <h3>Crear Usuario</h3>
-                    <p>Elige el Rol</p>
+                    <h3>Registrate Ahora!</h3>
+                    <p>Bienvenido a Mascota Feliz</p>
                     <form [formGroup]="fgValidador" (ngSubmit)="GuardarUsuario()">
 
                         <div class="col-md-12">
@@ -30,15 +30,13 @@
 
                         <div class="col-md-12">
                             <select formControlName="Rol" class="form-select mt-3">
-                                <option>admin</option>
-                                <option>Asesor</option>
                                 <option>Cliente</option>
                             </select>
                         </div>
 
                         <div class="form-button mt-3">
                             <button [disabled]="!fgValidador.valid" id="submit" type="submit"
-                                class="btn btn-primary">Crear Usuario</button>
+                                class="btn btn-primary">Registrarse</button>
                         </div>
                     </form>
                 </div>
