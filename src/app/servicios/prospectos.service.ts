@@ -19,11 +19,19 @@ export class ProspectosService {
   }
 
   ObtenerRegistrosProspectos(): Observable<ModeloProspectos[]> {
-    return this.Htpp.get<ModeloProspectos[]>(`${this.url}/prospectos`);
+    return this.Htpp.get<ModeloProspectos[]>(`${this.url}/prospectos`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   ObtenerRegistrosProspectosPorId(id: string): Observable<ModeloProspectos> {
-    return this.Htpp.get<ModeloProspectos>(`${this.url}/prospectos/${id}`);
+    return this.Htpp.get<ModeloProspectos>(`${this.url}/prospectos/${id}`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   CrearProspecto(mascota: ModeloProspectos): Observable<ModeloProspectos> {

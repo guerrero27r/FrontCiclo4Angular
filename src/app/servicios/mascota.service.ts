@@ -19,11 +19,19 @@ export class MascotaService {
   }
 
   ObtenerRegistrosMascota(): Observable<ModeloMascota[]> {
-    return this.Htpp.get<ModeloMascota[]>(`${this.url}/mascotas`);
+    return this.Htpp.get<ModeloMascota[]>(`${this.url}/mascotas`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   ObtenerRegistrosMascotaPorId(id: string): Observable<ModeloMascota> {
-    return this.Htpp.get<ModeloMascota>(`${this.url}/mascotas/${id}`);
+    return this.Htpp.get<ModeloMascota>(`${this.url}/mascotas/${id}`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   CrearMascota(mascota: ModeloMascota): Observable<ModeloMascota> {

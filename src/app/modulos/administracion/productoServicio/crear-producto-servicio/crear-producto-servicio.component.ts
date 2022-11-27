@@ -15,6 +15,7 @@ export class CrearProductoServicioComponent implements OnInit {
     Nombre: ['', [Validators.required]],
     Descripcion: ['', [Validators.required]],
     Precio: ['', [Validators.required]],
+    Foto: ['', [Validators.required]],
   });
 
   constructor(

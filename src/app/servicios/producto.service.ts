@@ -19,12 +19,21 @@ export class ProductoService {
   }
 
   ObtenerRegistros(): Observable<ModeloProducto[]> {
-    return this.Htpp.get<ModeloProducto[]>(`${this.url}/producto-servicios`);
+    return this.Htpp.get<ModeloProducto[]>(`${this.url}/producto-servicios`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   ObtenerRegistrosPorId(id: string): Observable<ModeloProducto> {
     return this.Htpp.get<ModeloProducto>(
-      `${this.url}/producto-servicios/${id}`
+      `${this.url}/producto-servicios/${id}`,
+      {
+        headers: new HttpHeaders({
+          Authorization: `Bearer ${this.token}`,
+        }),
+      }
     );
   }
 

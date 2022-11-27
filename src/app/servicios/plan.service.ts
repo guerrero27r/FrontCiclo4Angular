@@ -19,11 +19,19 @@ export class PlanService {
   }
 
   ObtenerRegistrosPlan(): Observable<ModeloPlan[]> {
-    return this.Htpp.get<ModeloPlan[]>(`${this.url}/plans`);
+    return this.Htpp.get<ModeloPlan[]>(`${this.url}/plans`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   ObtenerRegistrosPlanPorId(id: string): Observable<ModeloPlan> {
-    return this.Htpp.get<ModeloPlan>(`${this.url}/plans/${id}`);
+    return this.Htpp.get<ModeloPlan>(`${this.url}/plans/${id}`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   CrearPlan(producto: ModeloPlan): Observable<ModeloPlan> {

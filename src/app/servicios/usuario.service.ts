@@ -19,11 +19,19 @@ export class UsuarioService {
   }
 
   ObtenerUsuarios(): Observable<ModeloUsuario[]> {
-    return this.Htpp.get<ModeloUsuario[]>(`${this.url}/usuarios`);
+    return this.Htpp.get<ModeloUsuario[]>(`${this.url}/usuarios`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   ObtenerRegistrosUsuarioPorId(id: string): Observable<ModeloUsuario> {
-    return this.Htpp.get<ModeloUsuario>(`${this.url}/usuarios/${id}`);
+    return this.Htpp.get<ModeloUsuario>(`${this.url}/usuarios/${id}`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   CrearUsuario(usuario: ModeloUsuario): Observable<ModeloUsuario> {

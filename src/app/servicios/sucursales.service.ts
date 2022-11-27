@@ -19,11 +19,19 @@ export class SucursalesService {
   }
 
   ObtenerRegistrosSucursales(): Observable<ModeloSucursales[]> {
-    return this.Htpp.get<ModeloSucursales[]>(`${this.url}/sucursals`);
+    return this.Htpp.get<ModeloSucursales[]>(`${this.url}/sucursals`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   ObtenerRegistrosSucursalesPorId(id: string): Observable<ModeloSucursales> {
-    return this.Htpp.get<ModeloSucursales>(`${this.url}/sucursals/${id}`);
+    return this.Htpp.get<ModeloSucursales>(`${this.url}/sucursals/${id}`, {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.token}`,
+      }),
+    });
   }
 
   CrearSucursal(mascota: ModeloSucursales): Observable<ModeloSucursales> {
