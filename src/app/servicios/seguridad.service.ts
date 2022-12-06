@@ -9,7 +9,7 @@ import { ModeloRecuperarClave } from '../modelos/recuperarClave.modelo';
   providedIn: 'root',
 })
 export class SeguridadService {
-  url = 'http://localhost:3000';
+  url = 'https://repositoriociclo4-production.up.railway.app/';
   token: string = '';
   datosUsuarioSesion = new BehaviorSubject<ModeloIdentificar>(
     new ModeloIdentificar()

@@ -8,7 +8,7 @@ import { SeguridadService } from './seguridad.service';
   providedIn: 'root',
 })
 export class ProductoService {
-  url = 'http://localhost:3000';
+  url = 'https://repositoriociclo4-production.up.railway.app/';
   token: string = '';
 
   constructor(
