@@ -28,7 +28,6 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/init-m.js",
               "node_modules/crypto-js/crypto-js.js"
             ]
           },
